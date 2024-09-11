@@ -13,11 +13,12 @@ async function createUser(req,res)
             });
         }
         const user=await employee.create({
-            name:name,
-            email:email,
-            title:title,
-            department:department,
-            role:role
+            name,
+            email,
+            title,
+            department,
+            role,
+            image: `https://api.dicebear.com/5.x/initials/svg?seed=${name}`
         })
 
         return res.status(200).json({

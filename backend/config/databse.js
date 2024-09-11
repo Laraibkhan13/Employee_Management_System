@@ -4,7 +4,7 @@ require("dotenv").config()
 async function dbconnect()
 {
     try{
-        const con=await mongoose.connect(process.env.DATABSE_URL,);
+        const con=await mongoose.connect('mongodb+srv://khanlaraib13:qwerty1234@cluster0.8dgrbiv.mongodb.net/Employee');
         if(con)
         {
             console.log("DB connection successfull")
